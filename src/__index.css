@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-color-1: #AC6AFF;
+  --color-color-2: #FFC876;
+  --color-color-3: #FF776F;
+  --color-color-4: #7ADB78;
+  --color-color-5: #858DFF;
+  --color-color-6: #FF98E2;
+
+  --color-stroke-1: #26242C;
+
+  --color-n-1: #FFFFFF;
+  --color-n-2: #CAC6DD;
+  --color-n-3: #ADA8C3;
+  --color-n-4: #757185;
+  --color-n-5: #3F3A52;
+  --color-n-6: #252134;
+  --color-n-7: #15131D;
+  --color-n-8: #0E0C15;
+  --color-n-9: #474060;
+  --color-n-10: #43435C;
+  --color-n-11: #1B1B2E;
+  --color-n-12: #2E2A41;
+  --color-n-13: #6C7275;
+
+  --font-sans: var(--font-sora), ui-sans-serif, system-ui;
+  --font-code: var(--font-code);
+  --font-grotesk: var(--font-grotesk);
+
+  --tracking-tagline: 0.15em;
+
+  --spacing-0_25: 0.0625rem;
+  --spacing-7_5: 1.875rem;
+  --spacing-15: 3.75rem;
+
+  --opacity-15: 0.15;
+
+  --duration-default: 200ms;
+  --timing-default: linear;
+
+  --z-1: 1;
+  --z-2: 2;
+  --z-3: 3;
+  --z-4: 4;
+  --z-5: 5;
+
+  --border-default: 0.0625rem;
+}
+
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sora);
+    background-color: var(--color-n-8);
+    color: var(--color-n-1);
+    font-size: 1rem;
+    /* text-base */
+  }
+}
+
+@layer utilities {
+  .rotate-45 {
+    transform: rotate(45deg);
+  }
+
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+
+  .rotate-135 {
+    transform: rotate(135deg);
+  }
+
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+
+  .rotate-225 {
+    transform: rotate(225deg);
+  }
+
+  .rotate-270 {
+    transform: rotate(270deg);
+  }
+
+  .rotate-315 {
+    transform: rotate(315deg);
+  }
+
+  .rotate-360 {
+    transform: rotate(360deg);
+  }
+
+  .-rotate-45 {
+    transform: rotate(-45deg);
+  }
+
+  .-rotate-90 {
+    transform: rotate(-90deg);
+  }
+
+  .-rotate-135 {
+    transform: rotate(-135deg);
+  }
+
+  .-rotate-180 {
+    transform: rotate(-180deg);
+  }
+
+  .-rotate-225 {
+    transform: rotate(-225deg);
+  }
+
+  .-rotate-270 {
+    transform: rotate(-270deg);
+  }
+
+  .-rotate-315 {
+    transform: rotate(-315deg);
+  }
+
+  .-rotate-360 {
+    transform: rotate(-360deg);
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 77.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    @media (min-width: 768px) {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding-left: 3.75rem;
+      padding-right: 3.75rem;
+    }
+
+    @media (min-width: 1280px) {
+      max-width: 87.5rem;
+    }
+  }
+
+  .h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.75rem;
+      line-height: 3.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 3.25rem;
+      line-height: 4.0625rem;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 3.75rem;
+      line-height: 4.5rem;
+    }
+  }
+
+  .h2 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 3rem;
+      line-height: 1.25;
+    }
+  }
+
+  .h3 {
+    font-size: 2rem;
+    line-height: normal;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .h4 {
+    font-size: 2rem;
+    line-height: normal;
+  }
+
+  .h5 {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+
+  .h6 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+
+  .body-1 {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+      line-height: 1.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+  }
+
+  .body-2 {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  .caption {
+    font-size: 0.875rem;
+  }
+
+  .tagline {
+    font-family: var(--font-grotesk);
+    font-weight: 300;
+    font-size: 0.75rem;
+    letter-spacing: var(--tracking-tagline);
+    text-transform: uppercase;
+  }
+
+  .quote {
+    font-family: var(--font-code);
+    font-size: 1.125rem;
+    line-height: normal;
+  }
+
+  .button {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}
+
+
+@layer utilities {
+  .tap-highlight-color {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
